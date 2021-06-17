@@ -32,7 +32,7 @@ contract DEX is Wallet {
   //bids & asks
   //AND an orderbook for each asset
 
-  //order points to a ticker which points to a Enum option (uint 0, 1, etc)
+  //order points to an asset ticker (symbol) which points to an enum (Buy or Sell) option represented as uint 0, 1, etc)
   mapping (bytes32 => mapping (uint => TransactionOrder[])) public orderbook;
 
   //depositing ETH requires the dex.depositETH({value: X}); command
